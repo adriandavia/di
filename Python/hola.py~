@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+#EJERCICIO 2
+c = "Hola Mundo" #CADENA
+e = 23 #ENTERO
+
+#COMPARAR 
+print type (c)
+print type (e)

@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+varA = 33
+varB = "Hola"
+
+if varB == str or varA == str:
+	print ("Cadena involucrada")
