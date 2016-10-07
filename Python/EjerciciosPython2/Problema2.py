@@ -1,11 +1,15 @@
 #!/usr/bin/env python
-def gcdIter(a, b):
-	if b == 0:
-		return a;
-	else:
-		gcdIter(b, a%b)
 
-a = int(input("Primer valor: "))
-b = int(input("Segundo valor: "))
+#EJERCICIO PARA CALCULAR EL MAXIMO COMUN DIVISOR
+def gcdIter(a, b): #CALCULATING FUCTION
+	resto = 0
+	while (b > 0):
+		resto = b
+		b = a % b
+		a = resto 
+	return a
 
-print (gcdIter(a, b))
+a = int(input("Primer valor: ")) #INSERT NUMBER A
+b = int(input("Segundo valor: ")) #INSERT NUMBER B
+
+print ("Maximo comun divisor entre ", a, " y ", b, " es : ", gcdIter(a, b))#ROLE CALL AND PRINT
