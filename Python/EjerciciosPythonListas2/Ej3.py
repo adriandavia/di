@@ -19,4 +19,5 @@ for a in range(numero+1):
 			lista1[0:y] += [str(a)]
 			y += 1
 
+#imrpimimos los primos
 print ("Numeros primos desde 0 hasta el", numero, ":",lista1)
