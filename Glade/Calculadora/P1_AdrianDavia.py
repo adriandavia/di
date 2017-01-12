@@ -56,7 +56,7 @@ def borrar(button):
 error = "Por favor, introducir solo caracteres númericos"
 #Creamos un builder para cargar el .glade y contruir metodos y objetos
 builder = Gtk.Builder()
-builder.add_from_file("calculadora.glade")
+builder.add_from_file("P1_AdrianDavia.glade")
 handlers={
 	"on_bSum_clicked" : on_bSum_clicked,
 	"on_bRes_clicked" : on_bRes_clicked,
