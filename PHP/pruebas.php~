@@ -29,13 +29,9 @@ while ($i < $bucle){
 	$extensio = end($trozo);
 	
 	if ($extensio == "jpg"){
+		print "Extension valida";
 		$validas[] = $ficheros[$i];
-	}else if ($extensio == "gif"){
-		$validas[] = $ficheros[$i];
-	}else if ($extensio == "bmp"){
-		$validas[] = $ficheros[$i];
-	}else if ($extensio == "png"){
-		$validas[] = $ficheros[$i];
+		print $validas[$i];
 	}
 	$i++;
 	$comprobar = "";

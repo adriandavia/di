@@ -40,7 +40,7 @@
 				while ($fila <= TAM){
 					print "<tr>";
 					for ($j = 1; $j <= TAM; $j++){ 
-						print "<td>" . '<a href=/PHP/fotos/'.$valida[$numero].'><img src="/PHP/fotos/'.$valida[$numero].'" 							width=100 height=100/></a>' . "</td>";
+						print "<td>" . '<a href=/PHP/fotos/'.$valida[$numero].'><img src="/PHP/minifotos/MINI-'.$valida[$numero].'"/></a>' . "</td>";
 						$numero++;
 					}
 					print "</tr>";
