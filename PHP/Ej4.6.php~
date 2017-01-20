@@ -3,16 +3,16 @@
 	<body>
 		<table border=1 >
 			<?php
-				define ("TAM", 4); //definimos el tamaño por defecto 
-				function potencia ($variable1, $variable2){ //funcion para sacar las potencias 
+				define ("TAM", 4);
+				function potencia ($variable1, $variable2){
 					$resultado = pow($variable1, $variable2);
 					return $resultado;
 				}
 				$fila = 1; 
 				$numero = 1; 
-				while ($fila <= TAM){  //bucle para las filas de la tabla 
+				while ($fila <= TAM){  
 					print "<tr>";
-					for ($j = 1; $j <= TAM; $j++){ //bucle para las columnas
+					for ($j = 1; $j <= TAM; $j++){ 
 						print "<td>" . potencia($numero, $j) . "</td>";
 					}
 					$numero++;

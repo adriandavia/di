@@ -1,5 +1,5 @@
 <?php
-define ("TAM", 4); //definimos el tamaño para la tabla 
+	define ("TAM", 4); //definimos el tamaño para la tabla 
 	function extension(){
 		chdir('fotos'); //cambiamos al directorio fotos
 		$directorio = getcwd(); //obtenemos el directorio donde estamos y los guardamos en una variable
@@ -28,7 +28,24 @@ define ("TAM", 4); //definimos el tamaño para la tabla
 		}
 		return $validas; //devolvemos el array
 	}
+
+	function comprobar(){
+		$comprobar = extension(); 
+		chdir('fotos');
+//		chdir('minifotos'); 
+		$i = 0;
+		$bucle = count($comprobar); 
+		while ($i < $bucle){ //bucle para recorrer tantas veces como grande sea el array
+    		if (!file_exists("minifotos/MINI-".$comprobar[$i])){ //comprueba que exista el archivo
+//			chdir('..'); forma distinta de hacerlo 
+			system("convert -resize 100x100  ". $comprobar[$i] ." minifotos/MINI-".$comprobar[$i]); //comando para crear una nueva imagen
+		}
+		$i++;
+		}
+	}
+
 	$valida = extension(); //asignamos a una variable el array
+	comprobar();
 	$numero = 0;
 	$bucle2 = count($valida); //creamos una variable que valga la extension del array 
 	$fila = 1;
@@ -36,7 +53,7 @@ define ("TAM", 4); //definimos el tamaño para la tabla
 	while ($fila <= TAM){ //bucle para hacer la tabla
 		print "<tr>";
 		for ($j = 1; $j <= TAM; $j++){ //for para recorrer la tabla y asignar las fotos 
-			print "<td>" . '<a href='.$valida[$numero].'><img src="'.$valida[$numero].'" width=100 height=100/></a>' . "</td>";
+			print "<td>" . '<a href=fotos/'.$valida[$numero].'><img src="fotos/minifotos/MINI-'.$valida[$numero].'"/></a>' . "</td>";
 			$numero++;
 		}
 		print "</tr>";
@@ -44,4 +61,3 @@ define ("TAM", 4); //definimos el tamaño para la tabla
 	}
 	echo "</table>";
 ?>
-
